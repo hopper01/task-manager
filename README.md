@@ -2,6 +2,8 @@
 
 A straightforward task management application with a clean and responsive UI.
 
+🚀 **Live Demo**: [https://task-manager-sigma-self.vercel.app/](https://task-manager-sigma-self.vercel.app/)
+
 ## Features
 
 - **Dashboard**: View upcoming, overdue, and completed tasks
@@ -12,117 +14,44 @@ A straightforward task management application with a clean and responsive UI.
 - **Mobile Friendly**: Responsive design works on all devices
 - **Local Storage**: Task data persists in browser storage
 
-## Getting Started
+## Testing
 
-### Prerequisites
+The project includes both unit tests and end-to-end (E2E) tests.
 
-- Node.js (version 14 or higher)
-- npm or yarn
-- Git (for version control)
+### Unit Tests
 
-### Installation
+Unit tests are implemented using Vitest and React Testing Library. They test individual components and contexts to ensure they work as expected in isolation.
 
-1. Clone or download this repository
-2. Navigate to the project directory
+To run the unit tests:
 
 ```bash
-cd task-manager
+# Run tests once
+npm test
+
+# Run tests in watch mode
+npm run test:watch
+
+# Run tests with coverage report
+npm run test:coverage
 ```
 
-3. Install dependencies and start the development server
+### End-to-End Tests
+
+E2E tests are implemented using Cypress. They simulate real user interactions with the application to ensure the entire flow works as expected.
+
+To run the E2E tests:
 
 ```bash
-npm run setup
+# Open Cypress test runner
+npm run test:e2e
+
+# Run E2E tests in headless mode
+npm run test:e2e:headless
 ```
-
-Or manually:
-
-```bash
-npm install
-npm run dev
-```
-
-4. Open your browser and visit http://localhost:5173
-
-## Version Control with Git
-
-### Setup Git for this project
-
-The project comes with Git already initialized. To customize your Git configuration:
-
-1. Update your user details in the Git config:
-
-```bash
-git config user.name "Your Name"
-git config user.email "your.email@example.com"
-```
-
-2. Create your first commit:
-
-```bash
-git add .
-git commit -m "Initial commit"
-```
-
-3. Link to your remote repository (GitHub, GitLab, etc.):
-
-```bash
-git remote add origin https://github.com/yourusername/task-manager.git
-git push -u origin main
-```
-
-### Workflow
-
-1. Make changes to the code
-2. Stage your changes:
-   ```bash
-   git add .
-   ```
-3. Commit your changes:
-   ```bash
-   git commit -m "Description of changes"
-   ```
-4. Push to the remote repository:
-   ```bash
-   git push
-   ```
 
 ## Deployment on Vercel
 
-### Option 1: Deploy with Vercel CLI
-
-1. Install Vercel CLI
-```bash
-npm install -g vercel
-```
-
-2. Login to Vercel
-```bash
-vercel login
-```
-
-3. Deploy from the project directory
-```bash
-vercel
-```
-
-### Option 2: Deploy via Vercel Dashboard
-
-1. Push your code to a GitHub, GitLab, or Bitbucket repository
-
-2. Go to [Vercel Dashboard](https://vercel.com/dashboard)
-
-3. Click "Add New..." > "Project"
-
-4. Import your repository
-
-5. Configure the project:
-   - Framework Preset: Vite
-   - Build Command: `npm run build`
-   - Output Directory: `dist`
-   - Install Command: `npm install`
-
-6. Click "Deploy"
+The application is currently deployed on Vercel: [https://task-manager-sigma-self.vercel.app/](https://task-manager-sigma-self.vercel.app/)
 
 ## Tech Stack
 
@@ -133,6 +62,8 @@ vercel
 - date-fns (date manipulation)
 - Heroicons (icons)
 - HeadlessUI (accessible components)
+- Vitest & React Testing Library (unit testing)
+- Cypress (E2E testing)
 
 ## Usage
 
