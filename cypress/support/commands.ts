@@ -9,7 +9,7 @@
 // ***********************************************
 
 // -- This is a parent command --
-Cypress.Commands.add('addTask', (title, description, dueDate, priority = 'medium') => {
+Cypress.Commands.add('addTask', (title: string, description: string, dueDate: string, priority: string = 'medium') => {
   cy.contains('Add Task').click();
   cy.get('#title').type(title);
   cy.get('#description').type(description);

@@ -47,7 +47,26 @@ npm run test:e2e
 
 # Run E2E tests in headless mode
 npm run test:e2e:headless
+
+# Run E2E tests against production
+npm run test:e2e:prod
 ```
+
+## CI/CD Pipeline
+
+This project uses GitHub Actions for continuous integration and continuous deployment.
+
+### Workflow Steps
+
+1. **Build and Test**: Builds the application and runs unit tests on multiple Node.js versions
+2. **End-to-End Tests**: Runs E2E tests against the production environment for the main branch
+3. **Deployment**: Automatically deploys to Vercel when changes are pushed to the main branch
+
+The CI/CD pipeline ensures that:
+- All code changes are built successfully
+- Unit tests pass before deployment
+- Production E2E tests validate the live application
+- Deployment is automated for the main branch
 
 ## Deployment on Vercel
 
