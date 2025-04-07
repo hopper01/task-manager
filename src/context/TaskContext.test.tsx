@@ -1,8 +1,8 @@
 import React from 'react';
 import { describe, it, expect, beforeEach, vi } from 'vitest';
-import { render, screen, waitFor } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import { TaskProvider, TaskContext, Task, Priority } from './TaskContext';
+import { TaskContext } from './TaskContext';
 import { format } from 'date-fns';
 
 // Define Task type if not exported from TaskContext
@@ -16,8 +16,8 @@ interface TestTask {
   createdAt: string;
 }
 
-// Create a modified TaskProvider specifically for testing
-const CustomTaskProvider = ({ children }: { children: React.ReactNode }) => {
+// Custom provider for testing
+const CustomTaskProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   // Mock an empty initial state with proper typing
   const [tasks, setTasks] = React.useState<TestTask[]>([]);
 
